@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <ul>
+        <li>First Element</li>
+        <li>Second Element</li>
+        <li>Third Element</li>
+    </ul>
+    <script>
+        //Root Node
+       /* console.log(document.documentElement);
+        console.log(document.body);
+        console.log(document.head);
+
+        //children
+        //It returns all the child nodes of body
+        console.log(document.body.chidNodes);
+
+        //It returns important child nodes and remove unneccessary nodes of body
+        console.log(document.body.children);
+
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+
+        console.log(document.body.firstElementChild);
+        console.log(document.body.lastElementChild);*/
+
+        const childrenofBody=Array.from(document.body.childNodes);
+            childrenofBody1=Array.from(document.body.children);
+        console.log(childrenofBody);
+        console.log(childrenofBody1);
+    </script>
+</body>
+</html>
