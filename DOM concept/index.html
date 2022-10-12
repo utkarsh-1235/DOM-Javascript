@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <ul id="element">
+        <li>First Element</li>
+        <li>Second Element</li>
+        <li>Third Element</li>
+    </ul>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+    <script>
+        //Root Node
+
+       /* console.log(document.documentElement);
+        console.log(document.body);
+        console.log(document.head);
+
+        //children
+
+        //It returns all the child nodes of body
+        console.log(document.body.chidNodes);
+
+        //It returns important child nodes and remove unneccessary nodes of body
+
+        console.log(document.body.children);
+
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+
+        console.log(document.body.firstElementChild);
+        console.log(document.body.lastElementChild);*/
+
+        /*const childrenofBody=Array.from(document.body.childNodes);
+            childrenofBody1=Array.from(document.body.children);
+        console.log(childrenofBody);
+        console.log(childrenofBody1);
+
+        //return Siblings here we use two property next and prev
+
+        const ulTag=document.body.children[0];
+        const firstLi=ulTag.children[0];
+        const secondLi=ulTag.children[1];
+        console.log(secondLi.previousElementSibling);
+        console.log(secondLi.nextElementSibling);
+        console.log(firstLi.nextElementSibling);*/
+        
+        //Table DOM manipulation
+
+       /* const tableTag=document.body.children[1];
+        console.log(tableTag.tBodies[0].rows[0].cells[0].textContent);
+        console.log(tableTag.tBodies[0].rows[0].cells[0].style="background-color:red");*/
+
+        // Id search
+       /* element.style.background='red';
+        element.style.border='2px solid black';
+        element.style.borderRadius='4px';*/
+
+
+        const listItems=document.querySelectorAll('.list-items');
+        console.log(listItems);
+
+
+    </script>
+</body>
+</html>
