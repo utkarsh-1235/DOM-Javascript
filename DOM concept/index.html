@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document object model</title>
 </head>
-<body>
-    <ul id="element">
-        <li>First Element</li>
-        <li>Second Element</li>
-        <li>Third Element</li>
+<body id="body">
+    <ul id="element" data="valid">
+        <li class="List-items">First Element</li>
+        <li class="List-items">Second Element</li>
+        <li class="List-items">Third Element</li>
     </ul>
+    <div id="FirstDiv"class="item">First Div </div>
+        <script>
+            //query selector variable me data ko pass karke bhool jata hai jabki getElement refernce ko pass karta hai variable me
+
+           /* const item=document.getElementsByClassName('item');
+            console.log(item);*/
+
+        
+        </script>
+        <div class="item">Second Div </div>
     <table>
         <tr>
             <td>One</td>
@@ -71,9 +81,31 @@
         element.style.borderRadius='4px';*/
 
 
-        const listItems=document.querySelectorAll('.list-items');
-        console.log(listItems);
+       /* const listItems=document.querySelectorAll('.list-items');
+        console.log(listItems);*/
 
+
+        // Is method se predefined attribute ko access kiya jata hai
+        /*console.log(element.id);*/
+
+
+        //userdefined attribute ko access karne ka tareeka
+        /*console.log(element.getAttribute('data'));
+        console.log(element.setAttribute('order-placed','pending'));
+        console.log(element.getAttribute('order-placed'));
+        console.log(element.hasAttribute('order-placed'));
+        console.log(element.removeAttribute('order-placed'));*/
+
+
+        //Creating and Removing the node elements
+        const newDiv=document.createElement('div');
+        const newText=document.createTextNode('Namaste-world');
+        newDiv.appendChild(newText);
+       // body.append(newDiv);
+        //body.before(newDiv);
+        body.after(newDiv);
+        FirstDiv.replaceWith(newDiv);
+        FirstDiv.remove(newDiv);
 
     </script>
 </body>
