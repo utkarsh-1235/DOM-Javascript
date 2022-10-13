@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document object model</title>
+    <style>
+        #btn{
+            background-color: red;
+            color:black;
+            border: 2px solid rgb(128, 65, 34) ;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px;
+
+        }
+        
+    </style>
 </head>
 <body id="body">
     <ul id="element" data="valid">
@@ -21,7 +33,7 @@
 
         
         </script>
-        <div class="item">Second Div </div>
+       <!-- <div class="item">Second Div </div>
     <table>
         <tr>
             <td>One</td>
@@ -32,7 +44,8 @@
             <td>Three</td>
             <td>Four</td>
         </tr>
-    </table>
+    </table>!-->
+    <button id="btn"  onclick="alert('please do not click on it')">Show/hide</button>
     <script>
         //Root Node
 
@@ -103,9 +116,27 @@
         newDiv.appendChild(newText);
        // body.append(newDiv);
         //body.before(newDiv);
-        body.after(newDiv);
+       /* body.after(newDiv);
         FirstDiv.replaceWith(newDiv);
-        FirstDiv.remove(newDiv);
+        FirstDiv.remove(newDiv);*/
+
+
+        //Events in DOM
+
+        function callMe(event){
+            console.log(event.type);
+            console.log(event.CurrentTarget);
+            console.log(event.clientY);
+            console.log(event.clientX);
+            
+            alert("Thanks For Watching");
+        }
+
+       // btn.onclick=callMe;
+
+        btn.addEventListener('click',callMe);
+
+
 
     </script>
 </body>
